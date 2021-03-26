@@ -44,10 +44,7 @@ namespace EncompassApi.Extensions
             services.AddScoped<ITokenClient>(sp =>
                 new EncompassTokenClient(sp.GetService<IHttpClientFactory>().CreateClient(encompassTokenClientOptions.ClientName), options));
 
-            services.AddHttpClient("EncompassClient", c =>
-            {
-                c.BaseAddress = new Uri(encompassTokenClientOptions.BaseUrl);
-            })
+            services.AddEncompassClient(encompassTokenClientOptions)
                 .AddHttpMessageHandler(sp => new TokenHandler(sp.GetService<ITokenClient>()))
                 .AddPolicyHandler(retryPolicy)
                 .AddPolicyHandler(timeoutPolicy);
@@ -81,7 +78,7 @@ namespace EncompassApi.Extensions
             services.AddScoped<ITokenClient>(sp =>
                 new FairwayTokenClient(sp.GetService<IHttpClientFactory>().CreateClient(fairwayTokenClientOptions.ClientName), tokenClientIOptions));
 
-            services.AddHttpClient("EncompassClient")                
+            services.AddEncompassClient(fairwayTokenClientOptions)
                 .AddHttpMessageHandler(sp => new TokenHandler(sp.GetService<ITokenClient>()))
                 .AddPolicyHandler(retryPolicy)
                 .AddPolicyHandler(timeoutPolicy);
@@ -89,6 +86,32 @@ namespace EncompassApi.Extensions
             services.AddTransient<IEncompassApiClient>(sp => new EncompassApiService(sp.GetService<IHttpClientFactory>().CreateClient("EncompassClient"), clientParameters));
 
             return services;
+        }
+
+        private static IHttpClientBuilder AddEncompassClient(this IServiceCollection services, BaseHttpClientOptions options)
+        {
+            var builder = services.AddHttpClient("EncompassClient", client =>
+            {
+                client.BaseAddress = new Uri(options.BaseUrl);
+
+                if (options.ContentCompression) {
+                    client.DefaultRequestHeaders.AcceptEncoding.Add(new System.Net.Http.Headers.StringWithQualityHeaderValue("gzip"));
+                }
+            });
+
+            if (options.ContentCompression) {
+                builder.ConfigurePrimaryHttpMessageHandler(clientHandler => new HttpClientHandler()
+                {
+                    AutomaticDecompression = DecompressionMethods.GZip
+                });
+            } else {
+                builder.ConfigurePrimaryHttpMessageHandler(clientHandler => new HttpClientHandler()
+                {
+                    AutomaticDecompression = DecompressionMethods.None
+                });
+            }
+
+            return builder;
         }
     }
 }

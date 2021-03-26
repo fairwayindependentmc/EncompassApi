@@ -10,5 +10,7 @@
         public int TimeoutInSeconds { get; set; }
         public string ClientName { get; set; }
         public string BaseUrl { get; set; }
+
+        public bool ContentCompression { get; set; }
     }
 }
