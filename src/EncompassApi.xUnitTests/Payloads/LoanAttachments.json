@@ -1,0 +1,155 @@
+[
+  {
+    "title": "New Attachment 5",
+    "attachmentId": "Attachment-F60A5355-93A4-4EF1-B719-E2554AA51A58.txt",
+    "document": {
+      "entityId": "5f0ecf2c-83d0-4da3-bf02-987fd2d927ff",
+      "entityType": "document",
+      "entityName": "1003 - URLA",
+      "entityUri": "/v1/loans/12e28c2c-cd3d-4cf6-a147-6c1a6bc289da/documents/5f0ecf2c-83d0-4da3-bf02-987fd2d927ff"
+    },
+    "dateCreated": "2017-02-07T18:47:24Z",
+    "createdBy": "admin",
+    "createdByName": "Admin User",
+    "attachmentType": 0,
+    "fileSize": 1520,
+    "isActive": false,
+    "rotation": 0
+  },
+  {
+    "title": "1409EM000034.pdf",
+    "attachmentId": "67881cae-f682-486c-95fd-1275414a825e",
+    "dateCreated": "2017-01-24T00:49:16Z",
+    "createdBy": "admin",
+    "createdByName": "Admin User",
+    "attachmentType": 1,
+    "fileSize": 1784059,
+    "pages": [
+      {
+        "imageKey": "dd3d3aa0-4578-4543-bcf6-dcde4b1be5d3.jpg",
+        "zipKey": "Images-43b523d0-9c8b-46db-8e9e-25b26458cae3.zip",
+        "nativeKey": "Attachment-a0203915-e3da-4839-b5cd-5b196b1ce2ff.pdf",
+        "width": 1700,
+        "height": 2200,
+        "horizontalResolution": 200,
+        "verticalResolution": 200,
+        "fileSize": 422165,
+        "thumbnail": {
+          "imageKey": "80308ccb-5333-4b02-ae21-510910b5cc04.jpg",
+          "zipKey": "Thumbnails-2037d288-f48c-4aad-ba51-79710e942897.zip",
+          "width": 111,
+          "height": 144,
+          "horizontalResolution": 96,
+          "verticalResolution": 96
+        },
+        "annotations": []
+      },
+      {
+        "imageKey": "0403741d-98e4-4ed0-94ae-7e264d7528db.jpg",
+        "zipKey": "Images-43b523d0-9c8b-46db-8e9e-25b26458cae3.zip",
+        "nativeKey": "Attachment-a0203915-e3da-4839-b5cd-5b196b1ce2ff.pdf",
+        "width": 1700,
+        "height": 2200,
+        "horizontalResolution": 200,
+        "verticalResolution": 200,
+        "fileSize": 357955,
+        "thumbnail": {
+          "imageKey": "12727953-8bf4-4fa7-964f-843717b7d796.jpg",
+          "zipKey": "Thumbnails-2037d288-f48c-4aad-ba51-79710e942897.zip",
+          "width": 111,
+          "height": 144,
+          "horizontalResolution": 96,
+          "verticalResolution": 96
+        },
+        "annotations": []
+      },
+      {
+        "imageKey": "7ac94f10-1e09-4e0c-94e4-6fc75d240ffa.jpg",
+        "zipKey": "Images-43b523d0-9c8b-46db-8e9e-25b26458cae3.zip",
+        "nativeKey": "Attachment-a0203915-e3da-4839-b5cd-5b196b1ce2ff.pdf",
+        "width": 1700,
+        "height": 2200,
+        "horizontalResolution": 200,
+        "verticalResolution": 200,
+        "fileSize": 318086,
+        "thumbnail": {
+          "imageKey": "de1f9723-c628-48e0-8c9e-b804f62c6e1c.jpg",
+          "zipKey": "Thumbnails-2037d288-f48c-4aad-ba51-79710e942897.zip",
+          "width": 111,
+          "height": 144,
+          "horizontalResolution": 96,
+          "verticalResolution": 96
+        },
+        "annotations": []
+      },
+      {
+        "imageKey": "e4e8a7ff-6370-4756-82cb-dfdf37f69061.jpg",
+        "zipKey": "Images-43b523d0-9c8b-46db-8e9e-25b26458cae3.zip",
+        "nativeKey": "Attachment-a0203915-e3da-4839-b5cd-5b196b1ce2ff.pdf",
+        "width": 1700,
+        "height": 2200,
+        "horizontalResolution": 200,
+        "verticalResolution": 200,
+        "fileSize": 521589,
+        "thumbnail": {
+          "imageKey": "05805223-cffd-4653-ab6b-bcb15bd991d0.jpg",
+          "zipKey": "Thumbnails-2037d288-f48c-4aad-ba51-79710e942897.zip",
+          "width": 111,
+          "height": 144,
+          "horizontalResolution": 96,
+          "verticalResolution": 96
+        },
+        "annotations": []
+      },
+      {
+        "imageKey": "7884ec13-b981-400a-b890-0cfb2c611504.jpg",
+        "zipKey": "Images-43b523d0-9c8b-46db-8e9e-25b26458cae3.zip",
+        "nativeKey": "Attachment-a0203915-e3da-4839-b5cd-5b196b1ce2ff.pdf",
+        "width": 1700,
+        "height": 2200,
+        "horizontalResolution": 200,
+        "verticalResolution": 200,
+        "fileSize": 135119,
+        "thumbnail": {
+          "imageKey": "8dd6cf10-c86f-4b53-9600-16689cfe9ef1.jpg",
+          "zipKey": "Thumbnails-2037d288-f48c-4aad-ba51-79710e942897.zip",
+          "width": 111,
+          "height": 144,
+          "horizontalResolution": 96,
+          "verticalResolution": 96
+        },
+        "annotations": [
+          {
+            "dateCreated": "2017-01-24T00:49:42Z",
+            "createdBy": "Admin User",
+            "text": "Hello.",
+            "left": 618,
+            "top": 1161,
+            "width": 50,
+            "height": 50,
+            "visibilityType": 1
+          }
+        ]
+      },
+      {
+        "imageKey": "77f5669d-20b0-4a86-897c-6ee325bc57d5.png",
+        "zipKey": "Images-43b523d0-9c8b-46db-8e9e-25b26458cae3.zip",
+        "nativeKey": "Attachment-a0203915-e3da-4839-b5cd-5b196b1ce2ff.pdf",
+        "width": 1700,
+        "height": 2200,
+        "horizontalResolution": 200,
+        "verticalResolution": 200,
+        "fileSize": 29145,
+        "thumbnail": {
+          "imageKey": "08c904fe-9fc9-47bf-84ef-a871441e3c5a.jpg",
+          "zipKey": "Thumbnails-2037d288-f48c-4aad-ba51-79710e942897.zip",
+          "width": 111,
+          "height": 144,
+          "horizontalResolution": 96,
+          "verticalResolution": 96
+        },
+        "annotations": []
+      }
+    ]
+  }
+]

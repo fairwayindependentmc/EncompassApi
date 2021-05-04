@@ -332,7 +332,8 @@ namespace EncompassApi.Utilities
             {
                 using (var reader = new StreamReader(stream))
                 {
-                    return FromJson<T>(reader);
+                    var d = FromJson<T>(reader);
+                    return d;
                 }
             }
         }

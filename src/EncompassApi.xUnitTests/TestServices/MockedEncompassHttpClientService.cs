@@ -81,7 +81,10 @@ namespace EncompassApi.xUnitTests.TestServices
             "SendAsync",
                 ItExpr.IsAny<HttpRequestMessage>(),
                 ItExpr.IsAny<CancellationToken>())
-                .ReturnsAsync(respMsg);
+                .ReturnsAsync(respMsg).Callback(() => 
+                { 
+                
+                });
             return this;
         }
 
@@ -107,9 +110,14 @@ namespace EncompassApi.xUnitTests.TestServices
         }
 
 
-        public EncompassApi.Loans.Documents.LoanDocuments GetDocumentsApiAsync(string mockedLoanId)
+        public EncompassApi.Loans.Documents.LoanDocuments GetDocumentsApi(string mockedLoanId)
         {
            return MockedEncompassClient.Loans.GetLoanApis(mockedLoanId).Documents;
+        }
+
+        public EncompassApi.Loans.Attachments.LoanAttachments GetAttachmentsApi(string mockedLoanId)
+        {
+            return MockedEncompassClient.Loans.GetLoanApis(mockedLoanId).Attachments;
         }
 
         public event EventHandler<ApiResponseEventArgs> MockedEncompassClient_ApiResponse;

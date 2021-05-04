@@ -33,7 +33,7 @@ namespace EncompassApi.xUnitTests.Loans
             // GetDocumentsAsync
 
             // _outputWriter.WriteLine("### Starting {0}! ###", methodName);
-            var seed = Seeds.LoanDocuments.GetLoanDocumentsSeed();
+            var seed = Payloads.Helper.GetLoanDocuments();
             var targets = seed.Should()
                 .BeSerializable<JObject, EncompassApi.Loans.Documents.LoanDocument>(seed);
             var target = targets.FirstOrDefault();
@@ -69,7 +69,7 @@ namespace EncompassApi.xUnitTests.Loans
         [Fact]
         public async Task CreateDocumentTestAsync()
         {
-            var seed = Seeds.LoanDocuments.GetLoanDocumentSeed();
+            var seed = Payloads.Helper.GetLoanDocument();
             var target = seed.Should<EncompassApi.Loans.Documents.LoanDocument>()
                 .BeSerializable<EncompassApi.Loans.Documents.LoanDocument>(seed);
             target.Should().NotBeNull(because: "Target is null!");
@@ -83,7 +83,7 @@ namespace EncompassApi.xUnitTests.Loans
                    resp.Content = new StringContent(documentId);
                    resp.Headers.Location = new Uri("https://www.example.com/" + "xxx.pdf");
                }, testHeader: new KeyValuePair<string, string>("TestHeader", Faker.Lorem.GetFirstWord()))
-               .GetDocumentsApiAsync(mockedLoanId);
+               .GetDocumentsApi(mockedLoanId);
 
             source.ApiResponseEventHandler += (object sender, ApiResponseEventArgs e) => 
             {

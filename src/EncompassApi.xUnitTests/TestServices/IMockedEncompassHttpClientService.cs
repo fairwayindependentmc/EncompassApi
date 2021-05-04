@@ -21,6 +21,7 @@ namespace EncompassApi.xUnitTests.TestServices
         MockedEncompassHttpClientService SetClientApiResponse(EventHandler<ApiResponseEventArgs> callBack);
         EncompassApi.Webhook.Webhook SetWebhookApiResponseCallback(EventHandler<ApiResponseEventArgs> action);
         EncompassApi.Loans.Documents.LoanDocuments SetDocumentsApiResponseCallback(string mockedLoanId, EventHandler<ApiResponseEventArgs> action);
-        EncompassApi.Loans.Documents.LoanDocuments GetDocumentsApiAsync(string mockedLoanId);
+        EncompassApi.Loans.Documents.LoanDocuments GetDocumentsApi(string mockedLoanId);
+        EncompassApi.Loans.Attachments.LoanAttachments GetAttachmentsApi(string mockedLoanId);
     }
 }

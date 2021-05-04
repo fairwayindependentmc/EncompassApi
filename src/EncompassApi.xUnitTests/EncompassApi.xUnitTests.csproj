@@ -37,7 +37,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Payloads\LoanAttachments.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Payloads\LoanDocuments.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Payloads\MediaUrlObject.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Payloads\WebhookEvents.json">
