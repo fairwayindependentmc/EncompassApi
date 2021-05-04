@@ -14,12 +14,12 @@ using System.Net.Http;
 
 namespace EncompassApi.xUnitTests.Loans
 {
-    public class DocumentsTest
+    public class LoanDocumentsTest
     {
         private readonly ITestOutputHelper _outputWriter;
         private readonly IMockedEncompassHttpClientService _mockedEncompassClient;
 
-        public DocumentsTest(ITestOutputHelper outputWriter, IMockedEncompassHttpClientService mockedEncompassHttpClient)
+        public LoanDocumentsTest(ITestOutputHelper outputWriter, IMockedEncompassHttpClientService mockedEncompassHttpClient)
         {
             outputWriter.WriteLine("### DocumentsTest initiating! ###");
             _outputWriter = outputWriter;

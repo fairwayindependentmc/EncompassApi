@@ -15,12 +15,12 @@ using Xunit.Abstractions;
 
 namespace EncompassApi.xUnitTests.Loans
 {
-    public class LoanAttachments
+    public class LoanAttachmentsTest
     {
         private readonly ITestOutputHelper _outputWriter;
         private readonly IMockedEncompassHttpClientService _mockedEncompassClient;
 
-        public LoanAttachments(ITestOutputHelper outputWriter, IMockedEncompassHttpClientService mockedEncompassHttpClient)
+        public LoanAttachmentsTest(ITestOutputHelper outputWriter, IMockedEncompassHttpClientService mockedEncompassHttpClient)
         {
             outputWriter.WriteLine("### DocumentsTest initiating! ###");
             _outputWriter = outputWriter;
